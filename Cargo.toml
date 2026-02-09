@@ -1,0 +1,42 @@
+[package]
+name = "rs-img2png"
+version = "0.1.0"
+edition = "2024"
+
+exclude = [
+]
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+
+[profile.release-wasi]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 's'
+codegen-units = 1
+
+[dependencies.image]
+version = "0.25"
+features = [
+    "bmp",
+    "exr",
+    "gif",
+    "ico",
+    "jpeg",
+    "png",
+    "pnm",
+    "tga",
+    "tiff",
+    "webp",
+]
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+
