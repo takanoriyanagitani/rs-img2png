@@ -3,7 +3,16 @@ name = "rs-img2png"
 version = "0.1.0"
 edition = "2024"
 
+description = "Converts the input image bytes to a PNG."
+license = "Apache-2.0"
+repository = "https://github.com/takanoriyanagitani/rs-img2png"
+homepage = "https://github.com/takanoriyanagitani/rs-img2png"
+documentation = "https://docs.rs/rs-img2png/latest"
+keywords = ["image", "convert", "png", "wasi"]
+
 exclude = [
+    "rs-img2png.wasm",
+    "opt.wasm",
 ]
 
 [lints.rust]
